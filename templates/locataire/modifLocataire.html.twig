@@ -12,7 +12,7 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
             <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/locataire/locataire.css') }}">
 
         {% endblock %}
     </head>
@@ -22,12 +22,30 @@
             {% include 'navbar.html.twig' %}
             <div class="accueil">
                 <div class="container">
-                    <h1>Arthur serenne</h1>
-                    <p>Vous etes inscrit en tant que <strong>Locataire</strong> sur la plateforme.</p></br>
-                    <h5><strong>Actions :</strong></h5></br>
-                    <p>>Afficher les locations</p>
-                    <p>>Supprimer mon compte</p>
-                    <a href="/logout"><p>>Se deconnecter</p></a>
+                    <h1>Arthur Serenne</h1>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <form action="" method="post">
+                                <label for="nom">Nom<span>*</span></label>
+                                <input type="text" id="username" name="nom" value=""/>
+
+                                <label for="prenom">Prenom<span>*</span></label>
+                                <input type="text" id="prenom" name="prenom"/>
+
+                                <label for="email">Email<span>*</span></label>
+                                <input type="text" id="email" name="email"/>
+
+                                <label for="password">Mot de passe<span>*</span></label>
+                                <input type="password" id="password" name="_password"/>
+
+                                <label for="password">Confirmation du mot de passe<span>*</span></label>
+                                <input type="password" id="password" name="_password"/>
+
+                                <button class="btn btn-success" type="submit">Mettre à jour</button>
+                            </form>
+                        </div>
+                        <div class="col-md-7"></div>
+                    </div>
                 </div>
             </div>
             {% include 'footer.html.twig' %}

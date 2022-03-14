@@ -12,7 +12,7 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
             <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/locataire.css') }}">
 
         {% endblock %}
     </head>
@@ -22,12 +22,27 @@
             {% include 'navbar.html.twig' %}
             <div class="accueil">
                 <div class="container">
-                    <h1>Arthur serenne</h1>
-                    <p>Vous etes inscrit en tant que <strong>Locataire</strong> sur la plateforme.</p></br>
-                    <h5><strong>Actions :</strong></h5></br>
-                    <p>>Afficher les locations</p>
-                    <p>>Supprimer mon compte</p>
-                    <a href="/logout"><p>>Se deconnecter</p></a>
+                    <h1>Gestion des Mandataires <button class="btn btn-success">Nouveau Mandataire</button> </h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th class="thBis">Nom</th>
+                                <th class="thBis">Prenom</th>
+                                <th class="thBis">Nombre de locations gérées</th>
+                                <th class="thBis">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="tdBis">Arthur</td>
+                                <td class="tdBis">Serenne</td>
+                                <td class="tdBis">6</td>
+                                <td class="tdBis"><button class="btn btn-secondary"><a href="/mandataire/modifMandataire">Mettre à jour les données</a></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             {% include 'footer.html.twig' %}

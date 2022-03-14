@@ -13,4 +13,24 @@ class DefaultController extends AbstractController
 	{
 		return $this->render('base.html.twig');
 	}
+
+	public function locataire(): Response
+	{
+		return $this->render('locataire/locataire.html.twig');
+	}
+
+	public function modifLocataire(): Response
+	{
+		return $this->render('locataire/modifLocataire.html.twig');
+	}
+
+	public function mandataire(): Response
+	{
+		return $this->render('mandataire/mandataire.html.twig');
+	}
+
+	public function modifMandataire(): Response
+	{
+		return $this->render('mandataire/modifMandataire.html.twig');
+	}
 }

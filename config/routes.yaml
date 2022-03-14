@@ -11,6 +11,26 @@ index:
     methods: ["GET"]
     controller: App\Controller\DefaultController::index
 
+locataire:
+    path: /locataire
+    methods: ["GET"]
+    controller: App\Controller\DefaultController::locataire
+
+modifLocataire:
+    path: /locataire/modifLocataire
+    methods: ["GET"]
+    controller: App\Controller\DefaultController::modifLocataire
+
+mandataire:
+    path: /mandataire
+    methods: ["GET"]
+    controller: App\Controller\DefaultController::mandataire
+
+modifMandataire:
+    path: /mandataire/modifMandataire
+    methods: ["GET"]
+    controller: App\Controller\DefaultController::modifMandataire
+
 app_logout:
     path: /logout
     methods: GET
