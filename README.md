@@ -16,11 +16,9 @@ Fin decembre 2021/ avril 2022
 
 installation du projet :
 
-        npm install
-        npm run build
         composer install
 
-  creer la base de donnée :
+creer la base de donnée :
 
         php bin/console doctrine:database:create
 
