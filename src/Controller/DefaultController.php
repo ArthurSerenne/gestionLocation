@@ -14,6 +14,8 @@ class DefaultController extends AbstractController
 		return $this->render('base.html.twig');
 	}
 
+
+
 	public function locataire(): Response
 	{
 		return $this->render('locataire/locataire.html.twig');
@@ -23,6 +25,13 @@ class DefaultController extends AbstractController
 	{
 		return $this->render('locataire/modifLocataire.html.twig');
 	}
+
+	public function addLocataire(): Response
+	{
+		return $this->render('locataire/addLocataire.html.twig');
+	}
+
+
 
 	public function mandataire(): Response
 	{

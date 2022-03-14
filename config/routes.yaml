@@ -21,6 +21,11 @@ modifLocataire:
     methods: ["GET"]
     controller: App\Controller\DefaultController::modifLocataire
 
+addLocataire:
+    path: /locataire/addLocataire
+    methods: ["GET"]
+    controller: App\Controller\DefaultController::addLocataire
+
 mandataire:
     path: /mandataire
     methods: ["GET"]
