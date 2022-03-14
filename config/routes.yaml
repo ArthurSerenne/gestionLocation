@@ -26,6 +26,8 @@ addLocataire:
     methods: ["GET"]
     controller: App\Controller\DefaultController::addLocataire
 
+
+
 mandataire:
     path: /mandataire
     methods: ["GET"]
@@ -35,6 +37,11 @@ modifMandataire:
     path: /mandataire/modifMandataire
     methods: ["GET"]
     controller: App\Controller\DefaultController::modifMandataire
+
+addMandataire:
+    path: /mandataire/addMandataire
+    methods: ["GET"]
+    controller: App\Controller\DefaultController::addMandataire
 
 app_logout:
     path: /logout

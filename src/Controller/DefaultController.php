@@ -42,4 +42,9 @@ class DefaultController extends AbstractController
 	{
 		return $this->render('mandataire/modifMandataire.html.twig');
 	}
+	
+	public function addMandataire(): Response
+	{
+		return $this->render('mandataire/addMandataire.html.twig');
+	}
 }

@@ -22,27 +22,24 @@
             {% include 'navbar.html.twig' %}
             <div class="accueil">
                 <div class="container">
-                    <h1>Gestion des Mandataires <button class="btn btn-success"><a href="/mandataire/addMandataire">Nouveau Mandataire</a></button> </h1>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th class="thBis">Nom</th>
-                                <th class="thBis">Prenom</th>
-                                <th class="thBis">Nombre de locations gérées</th>
-                                <th class="thBis">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td class="tdBis">Arthur</td>
-                                <td class="tdBis">Serenne</td>
-                                <td class="tdBis">6</td>
-                                <td class="tdBis"><button class="btn btn-secondary"><a href="/mandataire/modifMandataire">Mettre à jour les données</a></button></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h1>Ajouter un Mandataire</h1>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <form action="" method="post">
+                                <label for="nom">Nom<span>*</span></label>
+                                <input type="text" id="username" name="nom" value=""/>
+
+                                <label for="prenom">Prenom<span>*</span></label>
+                                <input type="text" id="prenom" name="prenom"/>
+
+                                <label for="email">Email<span>*</span></label>
+                                <input type="text" id="email" name="email"/>
+
+                                <button class="btn btn-success" type="submit">Ajouter</button>
+                            </form>
+                        </div>
+                        <div class="col-md-7"></div>
+                    </div>
                 </div>
             </div>
             {% include 'footer.html.twig' %}
