@@ -10,8 +10,12 @@
 
 				<a class="linkNav" href="/">ACCUEIL</a>
                 <a class="linkNav" href="">BIENS</a>
+				{% if is_granted('ROLE_OWNER') %}
                 <a class="linkNav" href="/locataire">LOCATAIRES</a>
+				{% endif %}
+				{% if is_granted('ROLE_OWNER') %}
                 <a class="linkNav" href="/mandataire">MANDATAIRES</a>
+				{% endif %}
 			</ul>
             <ul>
 				<a class="linkNav" href=""><i class="fas fa-user-circle"></i>Mon profil</a>

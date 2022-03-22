@@ -22,8 +22,16 @@
             {% include 'navbar.html.twig' %}
             <div class="accueil">
                 <div class="container">
-                    <h1>Arthur serenne</h1>
+                    <h1>{{ app.user.nom }} {{ app.user.prenom }}</h1>
+                    {% if is_granted('ROLE_TENANT') %}  
                     <p>Vous etes inscrit en tant que <strong>Locataire</strong> sur la plateforme.</p></br>
+                    {% endif %}
+                    {% if is_granted('ROLE_REPRESENTATIVE') %}
+                    <p>Vous etes inscrit en tant que <strong>Mandataire</strong> sur la plateforme.</p></br>
+                    {% endif %}
+                    {% if is_granted('ROLE_OWNER') %}
+                    <p>Vous etes inscrit en tant que <strong>Bailleur</strong> sur la plateforme.</p></br>
+                    {% endif %}
                     <h5><strong>Actions :</strong></h5></br>
                     <p>>Afficher les locations</p>
                     <p>>Supprimer mon compte</p>
