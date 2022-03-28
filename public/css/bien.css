@@ -1,0 +1,48 @@
+#btnSerie img {
+	width: 100%;
+}
+
+#btnSerie div {
+	width: 200%;
+	margin-right: 10px;
+}
+
+#btnSerie{
+	width: 70%;
+	display: flex;
+	margin-left: 100px;
+	margin-top: 30px;
+	margin-bottom: 60px;
+    background-color: red;
+}
+
+#serieInfo {
+	display: flex;
+}
+
+#serieInfo p {
+	margin-right: 5px;
+}
+
+h1 {
+	margin-left: 150px;
+	margin-top: 50px;
+}
+
+#duree {
+	background-color: rgba(0, 0, 0, 0.05);
+	margin-left: 3px;
+	margin-left: 3px;
+	border-radius: 10px;
+}
+
+#cat {
+	background-color: rgba(60, 104, 236, 0.15);
+	margin-left: 3px;
+	margin-left: 3px;
+	border-radius: 10px;
+}
+
+a h1 {
+	font-size: 100px;
+}

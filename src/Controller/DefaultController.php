@@ -63,4 +63,10 @@ class DefaultController extends AbstractController
 
 		return $this->render('mandataire/addMandataire.html.twig');
 	}
+
+
+	public function biens(): Response
+	{
+		return $this->render('biens/biens.html.twig');
+	}
 }
