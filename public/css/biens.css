@@ -1,0 +1,93 @@
+/* BIENS.HTML.TWIG */
+
+.location img {
+	width: 200px;
+	height: 200px;
+}
+
+.location div {
+	width: 200%;
+	margin-right: 10px;
+}
+
+.location{
+	width: 40%;
+	display: flex;
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+.location h3{
+	color: #C16548;
+}
+
+.locationInfo {
+	display: flex;
+}
+
+.locationInfo p {
+	font-size: 10px;
+	margin-right: 5px;
+}
+
+p{
+	font-size: 17px;
+}
+
+.right{
+	margin-right: 50px;
+	float: right;
+}
+
+.btnLoc{
+	width: 100px;
+	background-color: #C16548;
+	color: #FFF;
+}
+
+a{
+	color: #FFF;
+}
+
+/* detailsBiens.html.twig */
+
+.details{
+	height: 900px;
+}
+
+.imgDetails{
+	width: 100%;
+	height: 240px;
+}
+
+label{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+input{
+    width: 100%;
+	display: flex;
+    border-radius: 4px;
+	padding-top: 5px;
+}
+
+span{
+    color: #C16548;
+}
+
+.btnBiens{
+	color: #C16548;
+}
+
+.thBis, .tdBis{
+    padding-left: 50px;
+}
+
+tr{
+    border-bottom:  2px solid #000;
+}
+
+table{
+    margin-top: 30px;
+}

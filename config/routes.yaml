@@ -48,6 +48,14 @@ biens:
     path: /biens
     methods: ["GET"]
     controller: App\Controller\DefaultController::biens
+detailsBiens:
+    path: /biens/details
+    methods: ["GET"]
+    controller: App\Controller\DefaultController::detailsBiens
+addBiens:
+    path: /biens/addBiens
+    methods: ["GET"]
+    controller: App\Controller\DefaultController::addBiens
 
 
 

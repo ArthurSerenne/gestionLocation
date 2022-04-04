@@ -11,8 +11,7 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
             <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/base.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/bien.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/biens.css') }}">
         {% endblock %}
     </head>
 
@@ -22,26 +21,45 @@
             <div class="accueil">
                 <div class="container">
                     <h4> {{"3"}} <span>Biens</span></h4>
-                    <div class="btnSerie">
-                        <div>
-                            <img src="img/marsu.jpg" alt="..."></div>
-                            <div>
+                    <button class="btn btn-primary">Afficher</button>
+                    <button class="btn btn-success"><a href="/biens/addBiens">Ajouter un bien</a></button>
+                    <div class="affichageLoc">
+                        <div class="location">
+                            <div class="img">
+                                <img src="img/m2.jpg" alt=""></div>
                                 <div>
-                                    <h3>Marsupilami</h3>
-                                </div>
-                                <div class="serieInfo">
-                                    <p>2021-10-09</p>
-                                    <p> Saison 4</p>
-                                    <p>Episode 1</p>
-                                    <p class="duree">Terminer</p>
-                                    <p class="cat">Aventure</p>
-                                </div>
-                                <div>
-                                    <p>Le marsupilami</p>
+                                    <div class="titre">
+                                        <h3>Lorem ipsum dolor sit amet</h3>
+                                    </div>
+                                    <div class="locationInfo">
+                                        <p>Disponible le 1er Decembre 2022</p>
+                                    </div>
+                                    <div class="locationInfo2">
+                                        <p class="right">Géré par Martin Dupont</p>
+                                        <p>Actuellement occupé</p>
+                                        <p>30 locations au total</p>
+                                        <a class="btnLoc" href="/biens/details">Accéder</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <a class="btn" href=""><h1>></h1></a>
+                        </div>
+                        <div class="location">
+                            <div class="img">
+                                <img src="img/m2.jpg" alt=""></div>
+                                <div>
+                                    <div class="titre">
+                                        <h3>Lorem ipsum dolor sit amet</h3>
+                                    </div>
+                                    <div class="locationInfo">
+                                        <p>Disponible le 1er Decembre 2022</p>
+                                    </div>
+                                    <div class="locationInfo2">
+                                        <p class="right">Géré par Martin Dupont</p>
+                                        <p>Actuellement occupé</p>
+                                        <p>30 locations au total</p>
+                                        <a class="btnLoc" href="">Accéder</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

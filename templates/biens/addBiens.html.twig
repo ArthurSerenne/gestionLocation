@@ -11,8 +11,7 @@
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
             <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/base.css') }}">
-
+            <link rel="stylesheet" href="{{ asset('css/biens.css') }}">
         {% endblock %}
     </head>
 
@@ -21,20 +20,24 @@
             {% include 'navbar.html.twig' %}
             <div class="accueil">
                 <div class="container">
-                    <h1>{{ app.user.nom }} {{ app.user.prenom }}</h1>
-                    {% if is_granted('ROLE_TENANT') %}  
-                    <p>Vous etes inscrit en tant que <strong>Locataire</strong> sur la plateforme.</p></br>
-                    {% endif %}
-                    {% if is_granted('ROLE_REPRESENTATIVE') %}
-                    <p>Vous etes inscrit en tant que <strong>Mandataire</strong> sur la plateforme.</p></br>
-                    {% endif %}
-                    {% if is_granted('ROLE_OWNER') %}
-                    <p>Vous etes inscrit en tant que <strong>Bailleur</strong> sur la plateforme.</p></br>
-                    {% endif %}
-                    <h5><strong>Actions :</strong></h5></br>
-                    <p>>Afficher les locations</p>
-                    <p>>Supprimer mon compte</p>
-                    <a href="/logout"><p>>Se deconnecter</p></a>
+                    <form action="" method="post">
+                            <label for="nom">Nom Résidence<span>*</span></label>
+                            <input type="text" id="nom" name="nom" value=""/>
+
+                            <label for="Adresse">Adresse<span>*</span></label>
+                            <input type="text" id="Adresse" name="Adresse"/>
+
+                            <label for="postal">Code postal<span>*</span></label>
+                            <input type="text" id="postal" name="postal"/>
+
+                            <label for="Ville">Ville<span>*</span></label>
+                            <input type="text" id="Ville" name="Ville"/>
+
+                            <label for="Mandataire">Mandataire<span>*</span></label>
+                            <select id="Mandataire" name="Mandataire"></select><br><br>
+
+                            <button class="btn btn-success" type="submit">Ajouter le bien</button>
+                    </form>
                 </div>
             </div>
             {% include 'footer.html.twig' %}

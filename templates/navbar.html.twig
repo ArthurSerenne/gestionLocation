@@ -8,8 +8,10 @@
 
 				<!--LIENS-->
 
-				<a class="linkNav" href="/">ACCUEIL</a>
-                <a class="linkNav" href="">BIENS</a>
+				<a class="linkNav" href="/accueil">ACCUEIL</a>
+				{% if is_granted('ROLE_REPRESENTATIVE') %}
+                <a class="linkNav" href="/biens">BIENS</a>
+				{% endif %}
 				{% if is_granted('ROLE_OWNER') %}
                 <a class="linkNav" href="/locataire">LOCATAIRES</a>
 				{% endif %}

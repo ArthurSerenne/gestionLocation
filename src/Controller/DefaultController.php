@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Security;
 use App\Entity\Users;
+use App\Entity\Residence;
 
 class DefaultController extends AbstractController
 {
@@ -67,6 +68,22 @@ class DefaultController extends AbstractController
 
 	public function biens(): Response
 	{
+		$this->denyAccessUnlessGranted('ROLE_REPRESENTATIVE');
+
 		return $this->render('biens/biens.html.twig');
+	}
+
+	public function detailsBiens(): Response
+	{
+		$this->denyAccessUnlessGranted('ROLE_REPRESENTATIVE');
+
+		return $this->render('biens/detailsBiens.html.twig');
+	}
+
+	public function addBiens(): Response
+	{
+		$this->denyAccessUnlessGranted('ROLE_REPRESENTATIVE');
+
+		return $this->render('biens/addBiens.html.twig');
 	}
 }

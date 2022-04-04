@@ -35,8 +35,7 @@ class ResidenceRepository extends ServiceEntityRepository
         ;
     }
     */
-
-    /*
+  
     public function findOneBySomeField($value): ?Residence
     {
         return $this->createQueryBuilder('r')
@@ -46,5 +45,6 @@ class ResidenceRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
-    */
+    
+
 }
