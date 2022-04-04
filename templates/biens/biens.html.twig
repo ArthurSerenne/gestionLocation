@@ -24,44 +24,27 @@
                     <button class="btn btn-primary">Afficher</button>
                     <button class="btn btn-success"><a href="/biens/addBiens">Ajouter un bien</a></button>
                     <div class="affichageLoc">
+                    {% for Residence in residences %}
                         <div class="location">
                             <div class="img">
                                 <img src="img/m2.jpg" alt=""></div>
                                 <div>
                                     <div class="titre">
-                                        <h3>Lorem ipsum dolor sit amet</h3>
+                                        <h3>{{ Residence.name }}</h3>
                                     </div>
                                     <div class="locationInfo">
                                         <p>Disponible le 1er Decembre 2022</p>
                                     </div>
                                     <div class="locationInfo2">
-                                        <p class="right">Géré par Martin Dupont</p>
+                                        <p class="right">Géré par Arthur Serenne</p>
                                         <p>Actuellement occupé</p>
-                                        <p>30 locations au total</p>
+                                        <p>06 locations au total</p>
                                         <a class="btnLoc" href="/biens/details">Accéder</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="location">
-                            <div class="img">
-                                <img src="img/m2.jpg" alt=""></div>
-                                <div>
-                                    <div class="titre">
-                                        <h3>Lorem ipsum dolor sit amet</h3>
-                                    </div>
-                                    <div class="locationInfo">
-                                        <p>Disponible le 1er Decembre 2022</p>
-                                    </div>
-                                    <div class="locationInfo2">
-                                        <p class="right">Géré par Martin Dupont</p>
-                                        <p>Actuellement occupé</p>
-                                        <p>30 locations au total</p>
-                                        <a class="btnLoc" href="">Accéder</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    {% endfor %}
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@
 				<!--LIENS-->
 
 				<a class="linkNav" href="/accueil">ACCUEIL</a>
-				{% if is_granted('ROLE_REPRESENTATIVE') %}
+				{% if is_granted('ROLE_REPRESENTATIVE') or ('ROLE_OWNER') %}
                 <a class="linkNav" href="/biens">BIENS</a>
 				{% endif %}
 				{% if is_granted('ROLE_OWNER') %}

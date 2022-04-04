@@ -9,6 +9,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Security;
 use App\Entity\Users;
 use App\Entity\Residence;
+use App\Repository\ResidenceRepository;
+use Symfony\Component\Security\Core\Role\Role;
 
 class DefaultController extends AbstractController
 {
@@ -20,7 +22,7 @@ class DefaultController extends AbstractController
 	}
 
 
-
+#
 	public function locataire(): Response
 	{
 		$this->denyAccessUnlessGranted('ROLE_OWNER');
@@ -66,23 +68,33 @@ class DefaultController extends AbstractController
 	}
 
 
-	public function biens(): Response
+	public function biens(ResidenceRepository $residenceRepository): Response
 	{
-		$this->denyAccessUnlessGranted('ROLE_REPRESENTATIVE');
+		$this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
-		return $this->render('biens/biens.html.twig');
+		if (in_array("ROLE_OWNER", $this->getUser()->getRoles())) {
+            $residences = $residenceRepository->findAll();
+        } else if (in_array("ROLE_REPRESENTATIVE", $this->getUser()->getRoles())) {
+            $residences = $residenceRepository->findBy(array("representative_id" => $this->getUser()));
+        } else {
+            return $this->render('base.html.twig');
+        }
+
+		return $this->render('biens/biens.html.twig', [
+			'residences' => $residences
+		]);
 	}
 
 	public function detailsBiens(): Response
 	{
-		$this->denyAccessUnlessGranted('ROLE_REPRESENTATIVE');
+		$this->denyAccessUnlessGranted('ROLE_REPRESENTATIVE') or ('ROLE_OWNER');
 
 		return $this->render('biens/detailsBiens.html.twig');
 	}
 
 	public function addBiens(): Response
 	{
-		$this->denyAccessUnlessGranted('ROLE_REPRESENTATIVE');
+		$this->denyAccessUnlessGranted('ROLE_OWNER');
 
 		return $this->render('biens/addBiens.html.twig');
 	}

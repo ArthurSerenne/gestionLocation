@@ -36,15 +36,13 @@ class ResidenceRepository extends ServiceEntityRepository
     }
     */
   
-    public function findOneBySomeField($value): ?Residence
-    {
-        return $this->createQueryBuilder('r')
-            ->andWhere('r.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
+    // public function finResidence()
+    // {
+    //     $repository = $this->getDoctrine()->getRepository(Residence::class);
+    //     $residence = $repository->findAll();
+    // }
+
+    
     
 
 }
